@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #form1 {
+            width: 800px; 
+            height:400px;
+  padding: 20px; 
+  margin: 50px auto; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: left; /* Align text to the left */
+}
+i{
+  margin-bottom: 10px;
+  padding: 2px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center; /* Center the title */
+  color: #333;
+}
+    </style>
+    <%- include('./partials/head') %>
+    <title>Add New Blog</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="container-fluid mt-5" id="form1">
+    <form action="/blog" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <i>Cover Image</i>
+            <input type="file" class="form-control" id="coverImage" name="coverImage" aria-describedby="coverImage">
+           
+          </div>
+        <div class="mb-3">
+          <i>Enter your title</i>
+          <input type="text" class="form-control" id="title" name="title" aria-describedby="enter your title">
+         
+        </div>
+        <div class="mb-3">
+            <i>Enter your content</i>
+            <textarea class="form-control" placeholder="Write your content here" id="body" name="body"></textarea>
+  
+           
+          </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
+    <%- include('./partials/scripts') %>  
+</body>
+</html>

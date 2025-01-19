@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>About Us</title>
+    <style>
+        body {
+            /*background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text for contrast */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem; /* Larger heading */
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.25rem; /* Larger paragraph text */
+            line-height: 1.6; /* Improved readability */
+        }
+        .note {
+            font-style: italic;
+            color: #cccccc; /* Lighter color for the note */
+        }
+    </style>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="container mt-4">
+        <h1>About Us</h1>
+        <p>
+            Welcome to our blog platform! This is the About Us page where you can learn more about our journey, mission, and the people behind the scenes. We are a group of passionate individuals who aim to create an open and vibrant community for bloggers and readers. Our platform is designed to foster meaningful conversations, exchange of ideas, and provide informative and entertaining content on a wide range of topics, from technology and innovation to lifestyle and personal growth.
+        </p>
+        <p>
+            Our team comprises experienced writers, web developers, and designers, who collaborate to ensure a seamless user experience while maintaining the highest content quality. We believe in the power of storytelling and aim to offer a space where everyone can share their unique perspectives and learn from others. Whether you're a casual reader or a dedicated blogger, we strive to make your experience here engaging and worthwhile.
+        </p>
+        <p>
+            Our platform is constantly evolving, and we are always looking for ways to improve. We value feedback from our users, as it helps us make informed decisions about future updates and features. We have ambitious plans for the coming months, including expanding our content categories, introducing community-driven features, and enhancing the overall design of the website to ensure it remains user-friendly and visually appealing.
+        </p>
+        <p class="note">
+            <strong>Note:</strong> Further changes will be made later to provide more detailed information about our team, mission, and vision. Stay tuned for upcoming updates, and thank you for being a part of our growing community!
+        </p>
+    </div>
+    <%- include('./partials/scripts') %>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+      <img src="/assets/logo.png" alt="Logo" width="50" height="30" class="d-inline-block align-text-top">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+
+              <% if (locals.user) { %>
+              <li class="nav-item">
+                  <a class="nav-link" href="/blog/add-new">Add blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <%=locals.user.email%>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
+                      <li><a class="dropdown-item" href="#">My profile</a></li>
+                  </ul>
+              </li>
+              <% } else { %>
+              <li class="nav-item">
+                  <a class="nav-link" href="/user/signup">Create Account</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/user/signin">Signin</a>
+              </li>
+              <% } %>
+
+              <!-- Move the "About" link outside the conditional blocks -->
+              <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+              </li>
+          </ul>
+      </div>
+      <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+  </div>
+</nav>
+
+<% if (locals.error) { %>
+
+  <div class="alert alert-danger" role="alert" style="max-width: 500px; margin: 10px auto;">
+      <%= locals.error %>
+  </div>
+
+<% } %>
+<% if (locals.success) { %>
+    <div class="alert alert-success" role="alert" style="max-width: 500px; margin: 10px auto;">
+        <%= locals.success %>
+    </div>
+  <% } %>
