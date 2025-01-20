@@ -1,4 +1,9 @@
 /* @extend display-flex; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .mt-3{
   padding-bottom: 10px;
   padding-left: 10px;
@@ -34,14 +39,20 @@ pre {
     white-space: pre-wrap; /* Wrap preformatted text */
     word-wrap: break-word; /* Break long words in preformatted text */
 }
-.container-fluid {
+/*.container-fluid {
   /*margin-left: 20px; /* Adjust as per your preference */
-  margin-right: 20px; 
-  display: flex;
-  justify-content: center;
+  /*margin-right: 20px; 
+  /*display: flex;
+  /*justify-content: ;*/
+  /*gap: 16px; /* Optional: space between the cards */
+  /*justify-content: center; /* Adjusts alignment */
  
-  flex-wrap: wrap; /* Allow items to wrap if necessary */
-  gap: 20px; /* Adjust as per your preference */
+  /*flex-wrap: wrap; /* Allow items to wrap if necessary */
+  /*gap: 20px; /* Adjust as per your preference */
+/*}*/
+.container-fluid {
+  margin-right: 20px; 
+  display: block; /* Use block to ensure Bootstrap's grid system works properly */
 }
   .card-img-top {
       width: 20 rem; /* Set the desired width */
